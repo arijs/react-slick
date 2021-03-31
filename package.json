@@ -1,11 +1,12 @@
 {
   "name": "@arijs/react-slick",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": " React port of slick carousel",
   "main": "./lib",
   "files": [
     "dist",
-    "lib"
+    "lib",
+    "index.d.ts"
   ],
   "scripts": {
     "start": "gulp server",
