@@ -12,7 +12,10 @@ export class PrevArrow extends React.PureComponent {
     this.props.clickHandler(options, e);
   }
   render() {
-    let prevClasses = { "slick-arrow": true, "slick-prev": true };
+    let prevClasses = {
+      [this.props.arrowClass]: true,
+      [this.props.arrowPrevClass]: true
+    };
     let prevHandler = this.clickHandler.bind(this, { message: "previous" });
 
     if (
@@ -63,7 +66,10 @@ export class NextArrow extends React.PureComponent {
     this.props.clickHandler(options, e);
   }
   render() {
-    let nextClasses = { "slick-arrow": true, "slick-next": true };
+    let nextClasses = {
+      [this.props.arrowClass]: true,
+      [this.props.arrowNextClass]: true
+    };
     let nextHandler = this.clickHandler.bind(this, { message: "next" });
 
     if (!canGoNext(this.props)) {
