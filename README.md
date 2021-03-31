@@ -4,6 +4,27 @@
 
 ##### Carousel component built with React. It is a react port of [slick carousel](http://kenwheeler.github.io/slick/)
 
+With extensions made by Rafael Hengles to allow user to replace fixed arrow element class names:
+
+- `slick-arrow`
+- `slick-prev`
+- `slick-next`
+
+Usage:
+
+```ts
+import Slider, { Settings } from "react-slick";
+
+export default function MyComponent({ children }) {
+  const settings: Settings = {
+    arrowClass: "my-foo-arrow",
+    arrowNextClass: "my-foo-next",
+    arrowPrevClass: "my-foo-prev"
+  };
+  return <Slider {...settings}>{children}</Slider>;
+}
+```
+
 ## [Documentation](http://react-slick.neostack.com)
 
 ### Installation
